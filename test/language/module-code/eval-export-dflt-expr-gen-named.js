@@ -26,7 +26,7 @@ flags: [module]
 features: [generators]
 ---*/
 
-import g from './eval-export-dflt-expr-gen-named.js';
+import g from './eval-export-dflt-expr-gen-named_FIXTURE.js';
 
 assert.sameValue(g().next().value, 88, 'binding initialized');
 assert.sameValue(g.name, 'gName', 'correct name is assigned');

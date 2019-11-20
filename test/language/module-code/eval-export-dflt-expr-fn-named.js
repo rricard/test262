@@ -25,7 +25,7 @@ info: |
 flags: [module]
 ---*/
 
-import f from './eval-export-dflt-expr-fn-named.js';
+import f from './eval-export-dflt-expr-fn-named_FIXTURE.js';
 
 assert.sameValue(f(), 7, 'binding initialized');
 assert.sameValue(f.name, 'fName', 'correct name is assigned');
