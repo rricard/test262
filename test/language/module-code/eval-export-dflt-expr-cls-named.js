@@ -25,8 +25,7 @@ info: |
 flags: [module]
 ---*/
 
-export default (class cName { valueOf() { return 45; } });
-import C from './eval-export-dflt-expr-cls-named.js';
+import C from './eval-export-dflt-expr-cls-named_FIXTURE.js';
 
 assert.sameValue(new C().valueOf(), 45, 'binding initialized');
 assert.sameValue(C.name, 'cName', 'correct name is assigned');

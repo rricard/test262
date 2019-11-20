@@ -25,7 +25,6 @@ info: |
 flags: [module]
 ---*/
 
-export default (function fName() { return 7; });
 import f from './eval-export-dflt-expr-fn-named.js';
 
 assert.sameValue(f(), 7, 'binding initialized');

@@ -26,8 +26,7 @@ flags: [module]
 features: [generators]
 ---*/
 
-export default (function* () { return 24601; });
-import g from './eval-export-dflt-expr-gen-anon.js';
+import g from './eval-export-dflt-expr-gen-anon_FIXTURE.js';
 
 assert.sameValue(g().next().value, 24601, 'binding initialized');
 assert.sameValue(g.name, 'default', 'correct name is assigned');

@@ -19,6 +19,6 @@ info: |
 flags: [module]
 ---*/
 
-import f from './eval-export-dflt-expr-in_FIXTURE.js';
+var x = { x: true };
 
-assert.sameValue(f, true);
+export default 'x' in x;
