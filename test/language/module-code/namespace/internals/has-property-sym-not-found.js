@@ -11,7 +11,7 @@ flags: [module]
 features: [Symbol, Reflect]
 ---*/
 
-import * as ns from './has-property-sym-not-found.js';
+import * as ns from './empty-module_FIXTURE.js';
 var sym = Symbol('test262');
 
 assert.sameValue(sym in ns, false, 'in');

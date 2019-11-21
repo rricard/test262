@@ -14,9 +14,7 @@ flags: [module]
 features: [Reflect]
 ---*/
 
-import * as ns from './has-property-str-not-found.js';
-var test262;
-export { test262 as anotherName };
+import * as ns from './has-property-str-not-found_FIXTURE.js';
 
 assert.sameValue('test262' in ns, false, 'in: test262');
 assert.sameValue(Reflect.has(ns, 'test262'), false, 'Reflect.has: test262');

@@ -11,7 +11,7 @@ flags: [module]
 features: [Symbol.toStringTag, Reflect]
 ---*/
 
-import * as ns from './has-property-sym-found.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 assert(Symbol.toStringTag in ns, 'in: Symbol.toStringTag');
 assert(Reflect.has(ns, Symbol.toStringTag), 'Reflect.has: Symbol.toStringTag');

@@ -6,7 +6,7 @@ description: The [[SetPrototypeOf]] internal method returns `false`
 flags: [module]
 ---*/
 
-import * as ns from './set-prototype-of.js';
+import * as ns from './empty-module_FIXTURE.js';
 var newProto = {};
 
 assert.sameValue(typeof Object.setPrototypeOf, 'function');

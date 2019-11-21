@@ -6,6 +6,6 @@ description: The [[IsExtensible]] internal method returns `false`
 flags: [module]
 ---*/
 
-import * as ns from './is-extensible.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 assert.sameValue(Object.isExtensible(ns), false);

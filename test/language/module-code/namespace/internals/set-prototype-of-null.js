@@ -8,7 +8,7 @@ description: >
 flags: [module]
 ---*/
 
-import * as ns from './set-prototype-of-null.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 assert.sameValue(typeof Object.setPrototypeOf, 'function');
 assert.sameValue(ns, Object.setPrototypeOf(ns, null));

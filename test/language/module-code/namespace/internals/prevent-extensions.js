@@ -7,7 +7,7 @@ flags: [module]
 features: [Reflect]
 ---*/
 
-import * as ns from './prevent-extensions.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 // This invocation should not throw an exception
 Object.preventExtensions(ns);
