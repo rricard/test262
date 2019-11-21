@@ -12,14 +12,8 @@ info: |
 flags: [module]
 ---*/
 
-import * as ns from './get-str-found-init.js';
-export var local1 = 23;
-var local2 = 45;
-export { local2 as renamed };
-export { local1 as indirect } from './get-str-found-init.js';
-export default 444;
+import * as ns from './get-str-found-init_FIXTURE.js';
 
 assert.sameValue(ns.local1, 23);
 assert.sameValue(ns.renamed, 45);
-assert.sameValue(ns.indirect, 23);
 assert.sameValue(ns.default, 444);

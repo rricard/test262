@@ -12,9 +12,7 @@ info: |
 flags: [module]
 ---*/
 
-import * as ns from './get-str-not-found.js';
-var test262;
-export { test262 as anotherName };
+import * as ns from './get-str-not-found_FIXTURE.js';
 
 assert.sameValue(ns.test262, undefined, 'key: test262');
 assert.sameValue(ns.toStringTag, undefined, 'key: toStringTag');

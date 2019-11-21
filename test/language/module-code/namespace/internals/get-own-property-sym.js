@@ -8,7 +8,7 @@ flags: [module]
 features: [Symbol, Symbol.toStringTag]
 ---*/
 
-import * as ns from './get-own-property-sym.js';
+import * as ns from './empty-module_FIXTURE.js';
 var notFound = Symbol('test262');
 var desc;
 

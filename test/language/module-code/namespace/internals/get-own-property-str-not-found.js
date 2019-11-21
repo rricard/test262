@@ -12,9 +12,7 @@ info: |
 flags: [module]
 ---*/
 
-import * as ns from './get-own-property-str-not-found.js';
-var test262;
-export { test262 as anotherName };
+import * as ns from './get-own-property-str-not-found_FIXTURE.js';
 var desc;
 
 assert.sameValue(

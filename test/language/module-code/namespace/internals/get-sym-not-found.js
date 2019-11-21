@@ -13,6 +13,6 @@ flags: [module]
 features: [Symbol]
 ---*/
 
-import * as ns from './get-sym-not-found.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 assert.sameValue(ns[Symbol('test262')], undefined, 'Symbol: test262');

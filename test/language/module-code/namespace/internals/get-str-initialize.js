@@ -12,14 +12,8 @@ flags: [module]
 features: [let]
 ---*/
 
-import * as ns from './get-str-initialize.js';
-export let localUninit1 = 111;
-let localUninit2 = 222;
-export { localUninit2 as renamedUninit };
-export { localUninit1 as indirectUninit } from './get-str-initialize.js';
-export default 333;
+import * as ns from './get-str-initialize_FIXTURE.js';
 
 assert.sameValue(ns.localUninit1, 111);
 assert.sameValue(ns.renamedUninit, 222);
-assert.sameValue(ns.indirectUninit, 111);
 assert.sameValue(ns.default, 333);

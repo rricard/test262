@@ -15,12 +15,7 @@ info: |
 flags: [module]
 ---*/
 
-import * as ns from './get-own-property-str-found-init.js';
-export var local1 = 201;
-var local2 = 207;
-export { local2 as renamed };
-export { local1 as indirect } from './get-own-property-str-found-init.js';
-export default 302;
+import * as ns from './get-own-property-str-found-init_FIXTURE.js';
 var desc;
 
 assert.sameValue(
@@ -40,15 +35,6 @@ assert.sameValue(desc.value, 207);
 assert.sameValue(desc.enumerable, true, 'renamed enumerable');
 assert.sameValue(desc.writable, true, 'renamed writable');
 assert.sameValue(desc.configurable, false, 'renamed configurable');
-
-assert.sameValue(
-  Object.prototype.hasOwnProperty.call(ns, 'indirect'), true
-);
-desc = Object.getOwnPropertyDescriptor(ns, 'indirect');
-assert.sameValue(desc.value, 201);
-assert.sameValue(desc.enumerable, true, 'indirect enumerable');
-assert.sameValue(desc.writable, true, 'indirect writable');
-assert.sameValue(desc.configurable, false, 'indirect configurable');
 
 assert.sameValue(
   Object.prototype.hasOwnProperty.call(ns, 'default'), true

@@ -13,6 +13,6 @@ flags: [module]
 features: [Symbol.toStringTag]
 ---*/
 
-import * as ns from './get-sym-found.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 assert.sameValue(typeof ns[Symbol.toStringTag], 'string');

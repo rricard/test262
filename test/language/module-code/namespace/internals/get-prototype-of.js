@@ -6,7 +6,7 @@ description: The [[GetPrototypeOf]] internal method returns `null`
 flags: [module]
 ---*/
 
-import * as ns from './get-prototype-of.js';
+import * as ns from './empty-module_FIXTURE.js';
 
 assert.sameValue(ns instanceof Object, false);
 assert.sameValue(Object.getPrototypeOf(ns), null);
