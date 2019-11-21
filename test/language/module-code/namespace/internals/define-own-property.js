@@ -9,14 +9,10 @@ flags: [module]
 features: [Symbol.iterator, Reflect, Symbol, Symbol.toStringTag]
 ---*/
 
-import * as ns from './define-own-property.js';
-export var local1;
-var local2;
-export { local2 as renamed };
-export { local1 as indirect } from './define-own-property.js';
+import * as ns from './define-own-property_FIXTURE.js';
 var sym = Symbol('test262');
 
-const exported = ['local1', 'renamed', 'indirect'];
+const exported = ['local1', 'renamed'];
 
 
 // Non-existant properties.
@@ -50,19 +46,6 @@ for (const key of ([...exported, Symbol.toStringTag])) {
 }
 
 assert.sameValue(
-  Reflect.defineProperty(ns, 'indirect',
-      {writable: true, enumerable: true, configurable: false}),
-  true,
-  'Reflect.defineProperty: indirect'
-);
-assert.sameValue(
-  Object.defineProperty(ns, 'indirect',
-      {writable: true, enumerable: true, configurable: false}),
-  ns,
-  'Object.defineProperty: indirect'
-);
-
-assert.sameValue(
   Reflect.defineProperty(ns, Symbol.toStringTag,
       {value: "Module", writable: false, enumerable: false,
        configurable: false}),
@@ -90,17 +73,6 @@ for (const key of ([...exported, Symbol.toStringTag])) {
     Object.defineProperty(ns, key, {value: 123});
   }, 'Object.defineProperty: ' + key.toString());
 }
-
-assert.sameValue(
-  Reflect.defineProperty(ns, 'indirect',
-      {writable: true, enumerable: true, configurable: true}),
-  false,
-  'Reflect.defineProperty: indirect'
-);
-assert.throws(TypeError, function() {
-  Object.defineProperty(ns, 'indirect',
-      {writable: true, enumerable: true, configurable: true});
-}, 'Object.defineProperty: indirect');
 
 assert.sameValue(
   Reflect.defineProperty(ns, Symbol.toStringTag,

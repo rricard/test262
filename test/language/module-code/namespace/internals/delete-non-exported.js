@@ -15,7 +15,7 @@ flags: [module]
 features: [Reflect, Symbol, Symbol.toStringTag]
 ---*/
 
-import * as ns from './delete-non-exported.js';
+import * as ns from './delete-non-exported_FIXTURE.js';
 var sym = Symbol('test262');
 
 assert(delete ns.undef, 'delete: undef');
